@@ -1,0 +1,5 @@
+programmi che ordinano cartelle:
+-alcuni ordinano in base al nome file (il nome del file deve essere uguale ma piu lungo di quell odella cartella)
+-altri leggono all interno dei file e li ordinano in base a quello che c e scrittto . per esempio se leggono CARTELLA==ciao, se esiste questa cartella spostano il file nella cartella ciao
+
+-parti da aggiungere :gestire altri casi--> per esempio quando nei file c e scritto tre volte CARTELLA== e ogni volta dopo CARETLLA== c e scritto qualcosa di diverso

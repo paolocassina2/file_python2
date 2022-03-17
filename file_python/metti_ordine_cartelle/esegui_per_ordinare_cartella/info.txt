@@ -1,0 +1,7 @@
+programma sortdirectory5.py funziona se scrivo CARTELLA==nomecartella all interno dei files...
+####################################################################################
+programma che sceglie la cartella in base al nome del file funziona ma potrebbe creare dei "guai".
+funziona correttamente solo scelgo accuratamente il nome dei file
+
+########################################################################
+una altra cosa che potrei aggiungere:se non esiste la cartella la creo e poi ci metto i files , altrimenti se esiste gia sposto i files
