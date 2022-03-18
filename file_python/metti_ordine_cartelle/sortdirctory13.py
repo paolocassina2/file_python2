@@ -1,7 +1,7 @@
 
 
-# ~ C:\Users\Attilio\Desktop\Nuova cartella
-#RIVEDERE CODICE ---!!!!GESTIRE ECCEZIONE: CHE NEL FILE  C E SCRITTO UN NOME DI CARTELLA INESISTENTE
+#
+#codice adesso è funzionante-->manca il controllo finale per asssicurarsi che il file sia effetivamente stato spostato nella cartella di destinazione
 import os
 def path():
 	# ~ "C:\\Users\\Attilio\\Desktop\\Nuova cartella"
