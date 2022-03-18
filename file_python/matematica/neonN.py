@@ -1,5 +1,5 @@
 
-###CARTELLA==serie
+###CARTELLA==matematica
 #9 -->quadrato 81--->  8+1=9
 c1=0
 for i in range(0,100):

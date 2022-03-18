@@ -1,4 +1,5 @@
 import csv
+###CARTELLA==programma_documenti
 with open("C:\\Users\\Attilio\\Desktop\\ciao1.csv", 'r') as file:
     reader = csv.reader(file)
     for row in reader:

@@ -1,4 +1,4 @@
-###CARTELLA=="parole_crociate"
+###CARTELLA==parole_crociate
 from english_words import english_words_set
 print('reset' in english_words_set)
 # ~ for i in range(10):

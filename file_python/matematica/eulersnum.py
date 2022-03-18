@@ -3,6 +3,7 @@ e=0
 n=9
 e=1
 # ~ fact=4
+###CARTELLA==matematica
 for i in range(1,n+1):
 	
 	n=i

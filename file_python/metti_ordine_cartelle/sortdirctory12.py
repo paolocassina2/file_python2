@@ -174,13 +174,17 @@ import shutil
 # ~ print(os.listdir(path)) # returns list
 # ~ print
 listafiles=[]
-listafolders=[]
+# ~ listafolders=[]
 # ~ def ciao():
 path2=path.var
+
+def listafolders():
+	listafolders.var=[]
+listafolders()
 for x  in os.listdir(path2):#guarda dentro questa cartella e se ci sono cartelle dimmi come si chiamano
 		# ~ path1=path2+str(x)	#path per accedere a file e cartelle
 		if (os.path.isdir(path2+str(x)))==True:
-			listafolders.append(x)
+			listafolders.var.append(x)
 				# ~ print(x)
 		else:
 			listafiles.append(x)
@@ -205,6 +209,10 @@ lista_cartelle=[]
 def lista1():
 	lista1.var=[]
 lista1()
+
+def NOMECARTELLA():
+	NOMECARTELLA.var=""
+NOMECARTELLA()
 def ordina():
 	for x in listafiles:#COSI FUNZIONA!!!!!!!!PRIMA LEGGO TUTTI I FILE DI UNA CARTELLA E CREO UNA LISTA di tipo zip CHE CONTIENE FILE leggibili E nomi CARTELLE di destinazione DEI FILE LEGGIBILI(nomi cartelle estratte dai file)
 		#poi successivamente scorro la lista che contiene i file e le cartelle di destinazione e sposto ciascun file nella sua cartella
@@ -248,7 +256,7 @@ def ordina():
 									j=z.replace(jj, '')
 							# ~ j=z.split()
 							# ~ print(y.replace('CARTELLA==', ''))
-									NOMECARTELLA=j.strip()
+									NOMECARTELLA.var=j.strip()
 									
 						# ~ if 
 						
@@ -256,7 +264,7 @@ def ordina():
 							# ~ break
 					
 							lista_file_da_spostare.append(x)
-							lista_cartelle.append(NOMECARTELLA)
+							lista_cartelle.append(NOMECARTELLA.var)
 
 
 				# ~ try:
@@ -280,8 +288,8 @@ def ordina():
 		import time
 		# ~ ciao=
 		# ~ print("ciao",ciao)
-		ciao22="C:\\Users\\Attilio\\Desktop\\Nuova cartella"
-		ciao33=os.listdir(ciao22)
+		# ~ ciao22="C:\\Users\\Attilio\\Desktop\\Nuova cartella"
+		ciao33=os.listdir(path.var)
 		print("ciao33 ",ciao33)	#da modificare ,serve solo per testare programma quest indirizzo
 		for x in lista1.var:
 				
@@ -322,25 +330,30 @@ def ordina():
 	# ~ return lista1
 print()					
 
-
+# ~ print("ciao33",ciao33)
 # ~ if len (lista1.var)>0:		
 ordinare=input("scrivi 'ordina' per ordinare la cartella, altrimenti premi qualsiasi tasto per uscire dal programma   " )	
+print("listafol",listafolders.var)
 if ordinare=="ordina":
-	
-	ordina()
-	print("lista1.var",lista1.var)
-	for xj in lista1.var:#ordina_e poi controlla che i file siano stati spostati corretamente
-		# ~ print(os.listdir("C:/Users/Attilio/desktop/file_python"))
-		if xj[1]!="":
-			if xj[0] in os.listdir(path.var+xj[1]):
-				print(xj[0] ," e stato spostato correttamente")
-			else:
-				print(xj[0] ,"non e stato spostato correttamente")	
+		# ~ folder=os.listdir(path.var)
+		# ~ print("folder",folder)
+		if NOMECARTELLA in listafolders.var:
+			ordina()
+			print("lista1.var",lista1.var)
+			for xj in lista1.var:#ordina_e poi controlla che i file siano stati spostati corretamente
+				# ~ print(os.listdir("C:/Users/Attilio/desktop/file_python"))
+				if xj[1]!="":
+					if xj[0] in os.listdir(path.var+xj[1]):
+						print(xj[0] ," e stato spostato correttamente")
+					else:
+						print(xj[0] ,"non e stato spostato correttamente")	
+				else:
+					print(xj[0], "non e stato spostato")	#file che probabilmente riesce a leggere ma all interno di essi non c e scritto il nome di una cartella (oppure c e scritto CARTELLA=="", quindi non sa dove spostarli
 		else:
-			print(xj[0], "non e stato spostato")	#file che probabilmente riesce a leggere ma all interno di essi non c e scritto il nome di una cartella (oppure c e scritto CARTELLA=="", quindi non sa dove spostarli
+			pass
 else:
-		pass
-	
+			pass
+		
 									
 # ~ else:
 	# ~ print("nessun file da spostare")							

@@ -1,5 +1,5 @@
 import os
-###CARTELLA=programmi_os
+###CARTELLA==programmi_os
 library=['"pip install opencv-python"','"pip install pyenchant"','"pip install random2"']
 
 for x in library:

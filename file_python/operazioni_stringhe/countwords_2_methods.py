@@ -1,4 +1,4 @@
-##CARTELLA==stringhe
+##CARTELLA==operazioni_stringhe
 def word_count(str):
     counts = dict()
     words = str.split()

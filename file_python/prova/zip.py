@@ -1,4 +1,6 @@
 
+
+###CARTELLA==prova
 abc=[1,2,3]
 cde=[3,4,5]
 abc2=zip(abc,cde)
