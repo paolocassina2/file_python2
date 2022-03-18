@@ -275,8 +275,8 @@ def ordina():
 				except:
 					print("eccezione1")
 					continue
-
-inserisci=input("inserisci ordina o break ")
+print()
+inserisci=input("inserisci 'ordina' per mettere in ordine i files o 'break' per interromepere il programma   	")
 if inserisci=="ordina":
 	ordina()
 else:
