@@ -110,6 +110,9 @@ def gioco(s1,s2):
 	# ~ return turno
 # ~ while victory==False:
 			print(gioco(s1,s2))
+			
+			
+gioco(s1,s2)
 # ~ turno=0
 # ~ def game():
 # ~ victory=False

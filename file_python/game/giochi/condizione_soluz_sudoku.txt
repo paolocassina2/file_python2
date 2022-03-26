@@ -1,0 +1,11 @@
+
+if f[contatore]!=g[contatore] and f[contatore]!=h[contatore] and f[contatore]!=k[contatore] and f[contatore]!=l[contatore]:
+f[contatore]!=m[contatore] and f[contatore]!=n[contatore] and f[contatore]!=o[contatore] and f[contatore]!=p[contatore]:
+if g[contatore]!=h[contatore] and g[contatore]!=k[contatore] and g[contatore]!=l[contatore] and g[contatore]!=m[contatore]:
+if g[contatore]!=n[contatore] and g[contatore]!=o[contatore] and g[contatore]!=p[contatore] and h[contatore]!=k[contatore]:
+if h[contatore]!=l[contatore] and h[contatore]!=m[contatore] and h[contatore]!=n[contatore] and h[contatore]!=o[contatore]:
+
+if h[contatore]!=p[contatore] and k[contatore]!=l[contatore] and k[contatore]!=m[contatore] and k[contatore]!=n[contatore]:
+if k[contatore]!=o[contatore] and k[contatore]!=p[contatore] and l[contatore]!=m[contatore] and l[contatore]!=n[contatore]:
+if l[contatore]!=o[contatore] and l[contatore]!=p[contatore] and m[contatore]!=n[contatore] and m[contatore]!=o[contatore]:
+if m[contatore]!=p[contatore] and n[contatore]!=o[contatore] and n[contatore]!=p[contatore] and o[contatore]!=p[contatore]:

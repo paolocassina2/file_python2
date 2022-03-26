@@ -6,7 +6,7 @@ mixer = Mixer(44100, 0.5)
 ######CARTELLA==timer
 # ~ import datetime
 import time
-
+#lunghezza allarme qualhe minuto
 # ~ datem = datetime. datetime. strptime(adesso, "%Y-%m-%d %H:%M:%S")
 
 # ~ print(datem)
@@ -35,7 +35,7 @@ def crea():
 # ~ s = Sound() 
 # ~ s.read('tones.wav') 
 # ~ s.play()
-crea()
+# ~ crea()
 # ~ os.open("tones.wav", 5)
 def tk_i():
 	import tkinter as tk
@@ -127,7 +127,8 @@ def timer():
 				break
 				# ~ tk_i()
 				# ~ a="abc"
-		alarm()
+		while True:
+			alarm()
 					# ~ import tkinter as tk
 					# ~ root = tk.Tk()
 					# ~ root.geometry("400x240")

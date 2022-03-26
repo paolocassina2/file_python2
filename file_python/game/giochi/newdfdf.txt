@@ -1,0 +1,10 @@
+listaverticale1=[str[f[1]]]+[str[g[1]]]+[str[h[1]]]+[str[k[1]]]+[str[l[1]	]]+[str[m[1]	]]+[str[n[1]	]]+[str[o[1]	]]+[str[p[1]	]]
+listaverticale2=[str[f[2]]]+[str[g[2]]]+[str[h[2]]]+[str[k[2]]]+[str[l[2]	]]+[str[m[2]	]]+[str[n[2]	]]+[str[o[2]	]]+[str[p[2]	]]
+
+listaverticale3=[str[f[3]]]+[str[g[3]]]+[str[h[3]]]+[str[k[3]	]]+[str[l[3]]	]+[str[m[3]	]]+[str[n[3]	]]+[str[o[3]]	]+[str[p[3]	]]
+listaverticale4=[str[f[4]]]+[str[g[4]]]+[str[h[4]]]+[str[k[4]	]]+[str[l[4]	]]+[str[m[4]	]]+[str[n[4]]	]+[str[o[4]	]]+[str[p[4]	]]
+listaverticale5=[str[f[5]]]+[str[g[5]]]+[str[h[5]]]+[str[k[5]	]]+[str[l[5]	]]+[str[m[5]	]]+[str[n[5]]	]+[str[o[5]	]]+[str[p[5]	]]
+
+listaverticale6=[str[f[6]]]+[str[g[6]]]+[str[h[6]]]+[str[k[6]	]]+[str[l[6]	]]+[str[m[6]	]]+[str[n[6]	]]+[str[o[6]	]]+[str[p[6]	]]
+listaverticale7=[str[f[7]]]+[str[g[7]]]+[str[h[7]]]+[str[k[7]	]]+[str[l[7]	]]+[str[m[7]	]]+[str[n[7]]	]+[str[o[7]	]]+[str[p[7]	]]
+listaverticale8=[str[f[8]]]+[str[g[8]]]+[str[h[8]]]+[str[k[8]	]]+[str[l[8]	]]+[str[m[8]	]]+[str[n[8]	]]+[str[o[8]	]]+[str[p[8]	]]
