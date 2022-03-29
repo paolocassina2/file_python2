@@ -427,9 +427,45 @@ def entrybox():
 				print("posizione= ",posizione.var)
 				print("turno ",a.var)
 			# ~ condizioni_vittoria()
-				label_res.var = tk.Label(root, text=res.var)
+				# ~ abc=70
+				# ~ conta=0
+				# ~ iniz=0
+				# ~ fine=3
+				# ~ for j in range(len(res.var)):
+					# ~ print(j)
+					# ~ conta=conta+1
+					# ~ if conta%3==0:
+						# ~ iniz=iniz+3
+						# ~ fine=fine+3
+						# ~ abc=abc+30
+						# ~ label_res.var = tk.Label(root, text=str(j))
+								
+						# ~ label_res.var.config(font=('helvetica', 14))
+								# ~ if conta%3==0:
+								# ~ j=j+20
+						# ~ canvas1.var.create_window(1100,abc,window=label_res.var)
+					# ~ else:
+				label_res.var = tk.Label(root, text=res.var[0:3])
+							
 				label_res.var.config(font=('helvetica', 14))
-				canvas1.var.create_window(800, 70, window=label_res.var)
+						# ~ if conta%3==0:
+						# ~ j=j+20
+				canvas1.var.create_window(1100,70,window=label_res.var)
+				
+				
+				label_res.var = tk.Label(root, text=res.var[3:6])
+							
+				label_res.var.config(font=('helvetica', 14))
+						# ~ if conta%3==0:
+						# ~ j=j+20
+				canvas1.var.create_window(1100,110,window=label_res.var)
+				
+				label_res.var = tk.Label(root, text=res.var[6:9])
+							
+				label_res.var.config(font=('helvetica', 14))
+						# ~ if conta%3==0:
+						# ~ j=j+20
+				canvas1.var.create_window(1100,140,window=label_res.var)
 	# ~ canvas= Canvas(root, width=100, height=100)
 				# ~ vinci.var="a"
 				

@@ -10,9 +10,57 @@
 ###############################################
 #parti da aggiungere. permettere al giocatore di cominciare una nuova partita non appena finisce una partita
 
+def caso():
+	caso.var="abc"
+caso()
 
+def traccia_riga():
+				#8 casi di vittoria e tracciamento righe indipendentemente che vinca il pc o il giocatore(3 linee orizziontali, 3 verticali e 2 diagonali)
+				if caso.var==1:# ~ if res.var[0]=="*" and res.var[1]=="*"  and res.var[2]=="*" :				#casi orizzontali
+						
+					canvas1.var.create_line(250, 150, 800, 150,width=2,fill="red")
+						
+				elif caso.var==2:
 
+			
+					canvas1.var.create_line(250, 300, 800, 300,width=2,fill="red")
+					
+				elif caso.var==3:
+			
+					canvas1.var.create_line(250, 500, 800, 500,width=2,fill="red")
+				# ~ vinci2.var="b"
+					# ~ break
+			# ~ ######################################
+# ~ def ciao():	
+				elif caso.var==4:
+				# ~ elif res.var[0]=="*" and res.var[3]=="*"  and res.var[6]=="*" :		#casi verticali
+					canvas1.var.create_line(300, 100, 300, 700,width=2,fill="red")
 
+						# ~ break
+				elif caso.var==5:
+				
+						canvas1.var.create_line(500, 100, 500, 700,width=2,fill="red")
+						# ~ break
+				elif caso.var==6:
+				# ~ elif res.var[2]=="*" and res.var[5]=="*"  and res.var[8]=="*" :
+					
+						# ~ print("tris")
+						# ~ vinci.var="a"
+						canvas1.var.create_line(700, 100, 700, 700,width=2,fill="red")
+					
+						# ~ vinci2.var="b"
+				# ~ #####vinci2.var="b"#########################################
+				elif caso.var==7:
+			
+						canvas1.var.create_line(240, 50, 800,590,width=2,fill="red")	
+					
+				elif caso.var==8:
+			
+						canvas1.var.create_line(200, 600, 650,150,width=2,fill="red")
+					
+					
+				######################################
+				
 
 
 
@@ -108,87 +156,99 @@ import random
 
 
 def condizioni_vittoria():
-				if res.var[0]=="*" and res.var[1]=="*"  and res.var[2]=="*" :				#casi orizzontali
-							print("tris")
-							vinci.var="a"
-							# ~ canvas.create_line(15, 25, 200, 25)
-							canvas1.var.create_line(200, 150, 700, 150,width=2,fill="red")
-							# ~ if c=33
-							vinci2.var="b"
-							# ~ break
-				elif res.var[3]=="*" and res.var[4]=="*"  and res.var[5]=="*" :
+				if res.var[0]=="*" and res.var[1]=="*"  and res.var[2]=="*" :	
+					caso.var=1#casi orizzontali
 					print("tris")
 					vinci.var="a"
-					canvas1.var.create_line(200, 300, 700, 300,width=2,fill="red")
-					vinci2.var="b"
+					# ~ canvas.create_line(15, 25, 200, 25)
+					# ~ canvas1.var.create_line(200, 150, 700, 150,width=2,fill="red")
+					# ~ if c=33
+					# ~ vinci2.var="b"
+							# ~ break
+				elif res.var[3]=="*" and res.var[4]=="*"  and res.var[5]=="*" :
+					caso.var=2
+					print("tris")
+					vinci.var="a"
+					# ~ canvas1.var.create_line(200, 300, 700, 300,width=2,fill="red")
+					# ~ vinci2.var="b"
 					#	break
 					# ~ break
 				elif res.var[6]=="*" and res.var[7]=="*"  and res.var[8]=="*" :
+					caso.var=3
 					print("tris")
 					vinci.var="a"
-					canvas1.var.create_line(200, 500, 700, 500,width=2,fill="red")
+					# ~ canvas1.var.create_line(200, 500, 700, 500,width=2,fill="red")
 					vinci2.var="b"
 					# ~ break
 			# ~ ######################################
 				elif res.var[0]=="*" and res.var[3]=="*"  and res.var[6]=="*" :		#casi verticali
+						caso.var=4
 						print("tris")
 						vinci.var="a"
 						vinci2.var="b"
 						# ~ break
 				elif res.var[1]=="*" and res.var[4]=="*"  and res.var[7]=="*" :
+						caso.var=5
 						print("tris")
 						vinci.var="a"
 						vinci2.var="b"
 						# ~ break
 				elif res.var[2]=="*" and res.var[5]=="*"  and res.var[8]=="*" :
-					
+						caso.var=6
 						print("tris")
 						vinci.var="a"
-						canvas1.var.create_line(700, 50, 700, 700,width=2,fill="red")
+						# ~ canvas1.var.create_line(700, 50, 700, 700,width=2,fill="red")
 						# ~ break
 						# ~ break
 						vinci2.var="b"
 				# ~ #####vinci2.var="b"#########################################
-				elif res.var[0]=="*" and res.var[4]=="*"  and res.var[8]=="*" :		#casi diagonali
+				elif res.var[0]=="*" and res.var[4]=="*"  and res.var[8]=="*" :	
+						caso.var=7	#casi diagonali
 						print("tris")
 						vinci.var="a"
-						canvas1.var.create_line(200, 800, 800,50,width=2,fill="red")
+						# ~ canvas1.var.create_line(200, 800, 800,50,width=2,fill="red")
 						vinci2.var="b"
 						# ~ break
 				elif res.var[2]=="*" and res.var[4]=="*"  and res.var[6]=="*" :
+						caso.var=8
 						print("tris")
 						vinci.var="a"
-						canvas1.var.create_line(50, 800, 800,50,width=2,fill="red")
+						# ~ canvas1.var.create_line(50, 800, 800,50,width=2,fill="red")
 						vinci2.var="b"
 						# ~ break
 				######################################
-				if res.var[0]=="#" and res.var[1]=="#"  and res.var[2]=="#" :				#computer
+				if res.var[0]=="#" and res.var[1]=="#"  and res.var[2]=="#" :	
+					caso.var=1			#computer
 					print("tris")
 					vinci2.var="a"
 					vinci.var="b"
-					canvas1.var.create_line(200, 100, 800, 100,width=2,fill="red")
+					# ~ canvas1.var.create_line(200, 100, 800, 100,width=2,fill="red")
 					# ~ break
 				elif res.var[3]=="#" and res.var[4]=="#"  and res.var[5]=="#" :
+						caso.var=2
 						print("tris")
 						vinci2.var="a"
 						vinci.var="b"
-						canvas1.var.create_line(200, 200, 800,200,width=2,fill="red")
+						# ~ canvas1.var.create_line(200, 200, 800,200,width=2,fill="red")
 						# ~ break
 				elif res.var[6]=="#" and res.var[7]=="#"  and res.var[8]=="#" :
+						caso.var=3
 						print("tris")
 					
-						canvas1.var.create_line(200, 500, 800,500,width=2,fill="red")
+						# ~ canvas1.var.create_line(200, 500, 800,500,width=2,fill="red")
 						vinci2.var="a"
 						vinci.var="b"
 						# ~ break
 				# ~ ######################################
-				elif res.var[0]=="#" and res.var[3]=="#"  and res.var[6]=="#" :		#casi verticali
+				elif res.var[0]=="#" and res.var[3]=="#"  and res.var[6]=="#" :	
+						caso.var=4	#casi verticali
 						print("tris")
 						vinci2.var="a"
 						vinci.var="b"
-						canvas1.var.create_line(300, 50, 300, 600,width=2,fill="red")
+						# ~ canvas1.var.create_line(300, 50, 300, 600,width=2,fill="red")
 						# ~ break
 				elif res.var[1]=="#" and res.var[4]=="#"  and res.var[7]=="#" :
+						caso.var=5
 						vinci2.var="a"
 						
 
@@ -198,22 +258,25 @@ def condizioni_vittoria():
 						# ~ break
 						# ~ break
 				elif res.var[2]=="#" and res.var[5]=="#"  and res.var[8]=="#" :
+						caso.var=6
 						vinci2.var="a"
-						canvas1.var.create_line(700, 50, 700, 700,width=2,fill="red")
+						# ~ canvas1.var.create_line(700, 50, 700, 700,width=2,fill="red")
 						vinci.var="b"
 						print("tris")
 						# ~ break
 						# ~ break
 				# ~ ##############################################
-				elif res.var[0]=="#" and res.var[4]=="#"  and res.var[8]=="#" :		#casi diagonali
+				elif res.var[0]=="#" and res.var[4]=="#"  and res.var[8]=="#" :	
+						caso.var=7	#casi diagonali
 						vinci2.var="a"
-						canvas1.var.create_line(50, 50, 800,800,width=2,fill="red")
+						# ~ canvas1.var.create_line(50, 50, 800,800,width=2,fill="red")
 						vinci.var="b"
 						print("tris")
 						# ~ break
 				elif res.var[2]=="#" and res.var[4]=="#"  and res.var[6]=="#" :
+						caso.var=8
 						vinci2.var="a"
-						canvas1.var.create_line(50, 800, 800,50,width=2,fill="red")
+						# ~ canvas1.var.create_line(50, 800, 800,50,width=2,fill="red")
 						vinci.var="b"
 						print("tris")
 						# ~ break
@@ -227,7 +290,7 @@ def condizioni_vittoria():
 						pareggio.var="pareggio"
 						# ~ print("pareggio")
 						
-
+				traccia_riga()
 
 def listascelte_possibili():
 		listascelte_possibili.var=[0,1,2,3,4,5,6,7,8]				#si chiama cosi in realtä sono le scelte possibili per tutti e due, non sono il pc
@@ -427,9 +490,45 @@ def entrybox():
 				print("posizione= ",posizione.var)
 				print("turno ",a.var)
 			# ~ condizioni_vittoria()
-				label_res.var = tk.Label(root, text=res.var)
+				# ~ abc=70
+				# ~ conta=0
+				# ~ iniz=0
+				# ~ fine=3
+				# ~ for j in range(len(res.var)):
+					# ~ print(j)
+					# ~ conta=conta+1
+					# ~ if conta%3==0:
+						# ~ iniz=iniz+3
+						# ~ fine=fine+3
+						# ~ abc=abc+30
+						# ~ label_res.var = tk.Label(root, text=str(j))
+								
+						# ~ label_res.var.config(font=('helvetica', 14))
+								# ~ if conta%3==0:
+								# ~ j=j+20
+						# ~ canvas1.var.create_window(1100,abc,window=label_res.var)
+					# ~ else:
+				label_res.var = tk.Label(root, text=res.var[0:3])
+							
 				label_res.var.config(font=('helvetica', 14))
-				canvas1.var.create_window(800, 70, window=label_res.var)
+						# ~ if conta%3==0:
+						# ~ j=j+20
+				canvas1.var.create_window(1100,70,window=label_res.var)
+				
+				
+				label_res.var = tk.Label(root, text=res.var[3:6])
+							
+				label_res.var.config(font=('helvetica', 14))
+						# ~ if conta%3==0:
+						# ~ j=j+20
+				canvas1.var.create_window(1100,110,window=label_res.var)
+				
+				label_res.var = tk.Label(root, text=res.var[6:9])
+							
+				label_res.var.config(font=('helvetica', 14))
+						# ~ if conta%3==0:
+						# ~ j=j+20
+				canvas1.var.create_window(1100,140,window=label_res.var)
 	# ~ canvas= Canvas(root, width=100, height=100)
 				# ~ vinci.var="a"
 				
@@ -440,16 +539,16 @@ def entrybox():
 				if vinci.var=="a":
 					label6.var = tk.Label(root, text="il giocatore ha vinto")
 					label6.var.config(font=('helvetica', 14))
-					canvas1.var.create_window(500, 20, window=label6.var)
+					canvas1.var.create_window(500, 50, window=label6.var)
 				elif vinci2.var=="a":
 					label6.var = tk.Label(root, text="il computer ha vinto")
 					label6.var.config(font=('helvetica', 14))
-					canvas1.var.create_window(500, 70, window=label6.var)
+					canvas1.var.create_window(500, 50, window=label6.var)
 					
 				elif pareggio.var=="pareggio": 
 					label6.var = tk.Label(root, text="PAREGGIO")
 					label6.var.config(font=('helvetica', 14))
-					canvas1.var.create_window(500, 70, window=label6.var)
+					canvas1.var.create_window(500, 50, window=label6.var)
 	canvas1.var.bind("<Key>", key)
 	canvas1.var.bind("<Button-1>", callback)
 	canvas1.var.pack()
@@ -468,17 +567,17 @@ def entrybox():
 	
 
 
-	label7.var = tk.Label(root, text="")
+	label7.var = tk.Label(root, text="TRIS")
 	label7.var.config(font=('helvetica', 14))
-	canvas1.var.create_window(600, 100, window=label7.var)
+	canvas1.var.create_window(600, 10, window=label7.var)
 
-	label8.var = tk.Label(root, text="")
-	label8.var.config(font=('helvetica', 14))
-	canvas1.var.create_window(600, 130, window=label8.var)
+	# ~ label8.var = tk.Label(root, text="")
+	# ~ label8.var.config(font=('helvetica', 14))
+	# ~ canvas1.var.create_window(600, 130, window=label8.var)
 
-	label9.var = tk.Label(root, text="")
-	label9.var.config(font=('helvetica', 14))
-	canvas1.var.create_window(600, 430, window=label9.var)
+	# ~ label9.var = tk.Label(root, text="")
+	# ~ label9.var.config(font=('helvetica', 14))
+	# ~ canvas1.var.create_window(600, 430, window=label9.var)
 	
 			
 	canvas1.var.create_line(250, 200, 800, 200)
