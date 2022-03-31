@@ -1,8 +1,9 @@
 #PULSANTE RESTART FUNZIONA
+#label _res_funziona
 ###############################################
-#parti da SISTEMARE-->label_res
-#parti da sistemare_-->consenitre a utente di premere pulaante ancora prima di giocare senza che si genenri un errore
 
+#parti da sistemare_-->consentire a utente di premere pulsante ancora prima di giocare senza che si generi un errore
+				#--->migliorare area dove si clicca in modo che si possa cliccare solo nei quadrati , 
 def caso():
 	caso.var="abc"
 caso()
@@ -532,40 +533,73 @@ def cancella_quadrati():
 	# ~ z8.var.destroy()	# ~ label_res.var.destroy()
 		# ~ label6.var.destroy()
 		# ~ canvas1.var.delete(z.v
-		# ~ canvas1.var.delete(z.var)								
+		# ~ canvas1.var.delete(z.var)		
+
+
 def entrybox():
 	# ~ def entry1():
 		# ~ entry1.var=""
 
 	
-
 	
 
 	import tkinter as tk
 	root = Tk()
 	canvas1.var = tk.Canvas(root, width = 1500, height =800,  relief = 'raised')
 	
-	label_res.var = tk.Label(root, text=res.var[0:3])
+	# ~ label_res.var = tk.Label(root, text=res.var[0:3])
 				
-	label_res.var.config(font=('helvetica', 14))
+	# ~ label_res.var.config(font=('helvetica', 14))
 			# ~ if conta%3==0:
 			# ~ j=j+20
-	canvas1.var.create_window(1100,70,window=label_res.var)
+	# ~ canvas1.var.create_window(1100,70,window=label_res.var)
 
 
-	label_res.var = tk.Label(root, text=res.var[3:6])
+	# ~ label_res.var = tk.Label(root, text=res.var[3:6])
 				
-	label_res.var.config(font=('helvetica', 14))
+	# ~ label_res.var.config(font=('helvetica', 14))
 			# ~ if conta%3==0:
 			# ~ j=j+20
-	canvas1.var.create_window(1100,110,window=label_res.var)
+	# ~ canvas1.var.create_window(1100,110,window=label_res.var)
 
-	label_res.var = tk.Label(root, text=res.var[6:9])
+	# ~ label_res.var = tk.Label(root, text=res.var[6:9])
 				
-	label_res.var.config(font=('helvetica', 14))
+	# ~ label_res.var.config(font=('helvetica', 14))
 			# ~ if conta%3==0:
 			# ~ j=j+20
-	canvas1.var.create_window(1100,140,window=label_res.var)			
+	# ~ canvas1.var.create_window(1100,140,window=label_res.var)	
+	
+	def drawlabel():
+		# ~ res=[x for x in range(1,10)]					#stampa per esempio in questo modo:
+					
+		def posX():
+			posX.var=1000
+		posX()
+		def posY():
+			posY.var=200
+		posY()																#			1 2 3
+																			#			4 5 6
+		# ~ canvas1.pack()													#			7 8 9
+		j=0
+		
+		for x in res.var:
+			# ~ if j>:
+				# ~ j=200
+			j=j+1
+			# ~ j=j+1
+			if j>1:
+				posX.var=posX.var+20
+			# ~ print(posX)
+			# ~ label6.var = tk.Label(root, text="pareggio")
+			# ~ label6.var.config(font=('helvetica', 14))
+			# ~ canvas1.var.create_window(500, 50, window=label6.var)		
+			# ~ if j==4 or j==6:
+			if ((j-1)%3==0):
+				posX.var=1000
+				posY.var=posY.var+20
+			label_res.var = tk.Label(root, text=x)
+			label_res.var.config(font=('helvetica', 14))
+			canvas1.var.create_window(posX.var, posY.var, window=label_res.var)		
 	# ~ label_res.var = tk.Label(root, text=res.var[0:3])
 	def newgame():
 		import tkinter as tk
@@ -589,7 +623,8 @@ def entrybox():
 		listascelte_possibili.var=[0,1,2,3,4,5,6,7,8]
 		print("res",res.var)
 		print("scelte", listascelte_possibili.var)
-		label_res.var.destroy()
+		drawlabel()
+		# ~ label_res.var.destroy()
 		
 		# ~ label_res.var = tk.Label(root, text=res.var[0:4])
 					
@@ -615,6 +650,8 @@ def entrybox():
 		
 		label6.var.destroy()
 		label8.var.destroy()
+	
+		# ~ label.
 		# ~ label8.var = tk.Label(root, text="turno "+str(a.var))
 		# ~ label8.var.config(font=('helvetica', 14))
 		# ~ canvas1.var.create_window(800, 130, window=label8.var)
@@ -706,7 +743,7 @@ def entrybox():
 			elif(event.x>600 and event.x<800) and (event.y>400 and event.y<800):
 				if vinci2.var=="b":
 					posizione.var=8
-					
+			
 			# ~ callback()			
 			# ~ callback()			
 		# ~ if (event.x >0 and event.x<400) and (event.y>0 and event.y<200):
@@ -804,7 +841,7 @@ def entrybox():
 				# ~ elif a.var>=5 :
 						# ~ if vinci2.var=="b" and vinci.var=="b":	
 							# ~ pareggio.var=="pareggio"
-			
+					
 				
 			# ~ pareggio.var="pareggio"
 						# ~ cancella_ovale()
@@ -817,37 +854,17 @@ def entrybox():
 			# ~ canvas1.var.create_window(500, 50, window=label6.var)											
 
 # ~ if vinci.var=="a":
+
 				label_res.var.destroy()
 					# ~ label6.var.destroy()e
-				label_res.var = tk.Label(root, text=res.var[0:3])
-							
-				label_res.var.config(font=('helvetica', 14))
-						# ~ if conta%3==0:
-						# ~ j=j+20
-				canvas1.var.create_window(1100,70,window=label_res.var)
+				drawlabel()	
 
-
-				label_res.var = tk.Label(root, text=res.var[3:6])
-							
-				label_res.var.config(font=('helvetica', 14))
-						# ~ if conta%3==0:
-						# ~ j=j+20
-				canvas1.var.create_window(1100,110,window=label_res.var)
-
-				label_res.var = tk.Label(root, text=res.var[6:9])
-							
-				label_res.var.config(font=('helvetica', 14))
-						# ~ if conta%3==0:
-						# ~ j=j+20
-				canvas1.var.create_window(1100,140,window=label_res.var)									
-
-	
 				
 	if pareggio.var=="pareggio":
 				label6.var = tk.Label(root, text="pareggio")
 				label6.var.config(font=('helvetica', 14))
 				canvas1.var.create_window(500, 50, window=label6.var)		
-	
+
 	
 	canvas1.var.bind("<Key>", key)
 	canvas1.var.bind("<Button-1>", callback)
