@@ -603,7 +603,7 @@ def entrybox():
 	# ~ label_res.var = tk.Label(root, text=res.var[0:3])
 	def newgame():
 		import tkinter as tk
-
+		print("game restarted")
 		cancella_linee()
 		cancella_quadrati()
 		cancella_ovale()
@@ -654,6 +654,11 @@ def entrybox():
 		
 		
 		label6.var.destroy()
+		
+		label8.var = tk.Label(root, text="")
+		label8.var.config(font=('helvetica', 14))
+		canvas1.var.create_window(800, 130, window=label8.var)	
+		
 		label8.var.destroy()
 		label8.var = tk.Label(root, text="turno "+str(a.var))
 		label8.var.config(font=('helvetica', 14))
@@ -899,7 +904,10 @@ def entrybox():
 	canvas1.var.create_window(50,50, window=button1)	
 		
 	# ~ root.mainloop()
-
+	label6.var = tk.Label(root, text="")
+	label6.var.config(font=('helvetica', 14))
+	canvas1.var.create_window(500, 50, window=label6.var)
+	label6.var.destroy()	
 
 	label7.var = tk.Label(root, text="TRIS")
 	label7.var.config(font=('helvetica', 14))
