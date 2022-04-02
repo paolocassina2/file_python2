@@ -1,4 +1,4 @@
-#PULSANTE RESTART FUNZIONA
+#PULSANTE RESTART FUNZIONA..
 #VERSIONE -->UMANO CONTRO UMANO
 ###############################################
 #CARTELLA==game
