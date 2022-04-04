@@ -3,7 +3,8 @@
 aa=["#","j","j"]
 bb=["#","x","#"]
 cc=["#","x","#"]
-
+sjdkfj=[x for x in range(1,5) if x!=4]
+print(sjdkfj)
 
 # ~ print(b,c,d)
 a=[aa,bb,cc]
