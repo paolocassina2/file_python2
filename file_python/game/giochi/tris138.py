@@ -1,8 +1,8 @@
 #PULSANTE RESTART FUNZIONA..
 #VERSIONE -->UMANO CONTRO pc--> inizia pc
-
+##
 ###############################################
-#manca il pulsante restart
+
 #CARTELLA==game
 
 
