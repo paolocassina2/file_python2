@@ -1,5 +1,8 @@
 note=["do","re","mi","fa","sol","la","si"]
 
+# ~ for x in note:
+	
+###CARTELLA==musica
 intervallo=["tono","tono","semitono","tono","tono","tono"]
 c=0
 a=0

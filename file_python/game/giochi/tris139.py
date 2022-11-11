@@ -1,9 +1,11 @@
 #PULSANTE RESTART FUNZIONA..
-#VERSIONE -->UMANO CONTRO pc--> inizia pc
+#VERSIONE --
 ##
 ###############################################
-
-#CARTELLA==game
+#una volta inizia pc, una volta il giocatore (alla fine di ogni partita)
+#CARTELLA==gameù
+#se inizia computer funziona, creare funzione che fa iniziare l'umano
+#inizia pc se contatore  è pari e computer se è dispari
 
 
 def jj():
@@ -324,6 +326,36 @@ def disegna_ovale():
 					elif int(scelta_pc.var)==8:
 						z8.var=canvas1.var.create_oval(650, 450, 750, 550, outline="#f11",fill="#1f1", width=2)
 
+
+
+def disegna_ovale_1():
+			
+				
+				if vinci.var=="b":		#disegna i cerchi solo se non il giocatore  non ha ancora vinto
+					if int(x.var)==0:
+						z.var=canvas1.var.create_oval(250, 80, 350, 180, outline="#f11",fill="#1f1", width=2)
+					elif int(x.var)==1:
+						z1.var=canvas1.var.create_oval(450, 80, 550, 180, outline="#f11",fill="#1f1", width=2)
+					elif int(x.var)==2:
+						z2.var=canvas1.var.create_oval(650,80, 750, 180, outline="#f11",fill="#1f1", width=2)
+
+					elif int(x.var)==3:
+						z3.var=canvas1.var.create_oval(250, 250, 350, 350, outline="#f11",fill="#1f1", width=2)
+
+					elif int(x.var)==4:
+						z4.var=canvas1.var.create_oval(450, 250, 550, 350, outline="#f11",fill="#1f1", width=2)
+
+					elif int(x.var)==5:
+						z5.var=canvas1.var.create_oval(650, 250, 750, 350, outline="#f11",fill="#1f1", width=2)
+
+					elif int(x.var)==6:
+						z6.var=canvas1.var.create_oval(250, 450, 350, 550, outline="#f11",fill="#1f1", width=2)
+
+					elif int(x.var)==7:
+						z7.var=canvas1.var.create_oval(450, 450, 550, 550, outline="#f11",fill="#1f1", width=2)
+
+					elif int(x.var)==8:
+						z8.var=canvas1.var.create_oval(650, 450, 750, 550, outline="#f11",fill="#1f1", width=2)
 def cancella_ovale():
 	canvas1.var.delete(z.var)
 	canvas1.var.delete(z1.var)
@@ -741,6 +773,24 @@ def listascelte_possibili():
 listascelte_possibili()
 from tkinter import *
 inizio="inizio"
+def c_partita():
+	c_partita.var=0
+c_partita()	
+
+
+
+
+# ~ def inizia_umano():
+		# ~ if posizione.var in listascelte_possibili.var:
+					
+				# ~ a.var=a.var+1	
+				
+				# ~ label8.var = tk.Label(root, text="turno "+str(a.var))
+				# ~ label8.var.config(font=('helvetica', 14))
+		# ~ disegna_ovale()
+				
+
+
 
 
 def newgame():
@@ -765,6 +815,10 @@ def newgame():
 					# ~ condizioni_vittoria()
 					# ~ traccia_riga()#cancella linee se caso.var è 0
 					# ~ traccia_riga()
+					# ~ condizioni_vittoria()
+					c_partita.var+=1
+
+							# ~ print("testo ",testo.var)
 					words.var = "- - - - - - - - -"
 					res.var=""
 					res.var = words.var.split()
@@ -782,15 +836,23 @@ def newgame():
 					# ~ if conta.var%2!=0:
 					print(scelta_pc.var)		#scelta_iniziale del pc
 					# ~ posizione.var=scelta_pc
-					res.var[scelta_pc.var]="#"
-					disegna_ovale()
-					listascelte_possibili.var.remove(scelta_pc.var)
+					if c_partita.var%2==0:
+						res.var[scelta_pc.var]="#"
+						disegna_ovale()
+						listascelte_possibili.var.remove(scelta_pc.var)
 					# ~ scelta_giocatore()			
 					print(listascelte_possibili.var)
 					# ~ condizioni_vittoria()
 					conta.var=conta.var+1
 					# ~ cancella_linee()
 					cancella_linee()
+					canvas1.var.delete(t)
+					# ~ t=canvas1.var.create_text(200,300,font=("Purisa", 20), text="")
+					# ~ canvas1.var.delete(t)
+				
+					# ~ label_res.var.destroy()
+					# ~ label8.var.destroy()
+					# ~ label8.var.destroy()
 					# ~ label8.var = tk.Label(root, text="turno" + str(conta.var))
 					# ~ label8.var.config(font=('helvetica', 14))
 					# ~ canvas1.var.create_window(1000, 130, window=label8.var)	
@@ -803,10 +865,78 @@ def cancella_linee():
 			canvas1.var.delete(jj5.var)
 			canvas1.var.delete(jj6.var)
 			canvas1.var.delete(jj7.var)
-			
+		
 def testo():
 	testo.var=""
 testo()
+
+def a():
+	a.var=0
+a()
+
+def inizia_pc():
+					# ~ vinci1.var="b"
+					# ~ vinci2.var="b"
+					# ~ cancella_linee()
+					# ~ condizioni_vittoria()
+					if vinci.var=="b" and vinci2.var=="b":
+						if posizione.var in listascelte_possibili.var:
+						
+							res.var[posizione.var]="*"
+							disegna_rettangolo()
+							listascelte_possibili.var.remove(posizione.var)
+							
+							condizioni_vittoria()
+							traccia_riga()
+						
+							if vinci.var=="b" and vinci2.var=="b":
+								scelta_pc.var=random.choice(listascelte_possibili.var)
+						
+					
+								print(scelta_pc.var)		#scelta_iniziale del pc
+								# ~ posizione.var=scelta_pc
+								res.var[scelta_pc.var]="#"
+								disegna_ovale()
+								listascelte_possibili.var.remove(scelta_pc.var)
+								# ~ scelta_giocatore()			
+								print(listascelte_possibili.var)
+								condizioni_vittoria()	
+								# ~ if vinci1.var=="a" or vinci2.var=="a":
+								traccia_riga()
+								
+								
+							if vinci.var=="a" and vinci2.var=="b" :
+									inizio="no"
+									
+																	# ~ canvas = tk.Canvas(root, width=400, height=500)
+									# ~ canvas.pack()
+									# ~ canvas.create_text(100,10, text="Hello World!")
+									testo.var=canvas1.var.create_text(1000,300, font=("Purisa", 20),text="il giocatore vince")
+									# ~ label6.var.destroy()
+									# ~ label6.var = tk.Label(root, text="vince giocatore")
+									# ~ label6.var.config(font=('helvetica', 14))
+									# ~ canvas1.var.create_window(1000, 200, window=label6.var) 
+											# ~ vinci.var="b"
+													# ~ else:
+														# ~ vinci.var="b"
+														# ~ vinci2.var="b"
+														# ~ caso.var=-1000
+							if vinci2.var=="a" and vinci.var=="b":
+									testo.var=canvas1.var.create_text(1000,300,font=("Purisa", 20),text="il pc vince")
+									# ~ label6.var.destroy()
+									# ~ label6.var = tk.Label(root, text="vince PC")
+									# ~ label6.var.config(font=('helvetica', 14))
+									# ~ canvas1.var.create_window(1000, 200, window=label6.var) 
+							
+							if len(listascelte_possibili.var)==0 and vinci.var=="b" and vinci2.var=="b":
+									# ~ label6.var.destroy()
+									testo.var=canvas1.var.create_text(1000,300,font=("Purisa", 20), text="pareggio")
+									# ~ label6.var = tk.Label(root, text="PAREGGIO")
+									# ~ label6.var.config(font=('helvetica', 14))
+									# ~ canvas1.var.create_window(1000, 200, window=label6.var) 
+							print(listascelte_possibili.var)
+							# ~ print("testo ",testo.var)
+
 
 def entrybox():
 	# ~ def entry1():
@@ -837,6 +967,147 @@ def entrybox():
 	canvas1.var.create_line(600, 100, 600, 700)
 	vinci.var="b"
 	vinci2.var="b"
+
+	def drawlabel():
+		# ~ res=[x for x in range(1,10)]					#stampa per esempio in questo modo:
+					
+		def posX():
+			posX.var=1000
+		posX()
+		def posY():
+			posY.var=200
+		posY()																#			1 2 3
+																			#			4 5 6
+		# ~ canvas1.pack()													#			7 8 9
+		j=0
+		
+		for x in res.var:
+			# ~ if j>:
+				# ~ j=200
+			j=j+1
+			# ~ j=j+1
+			if j>1:
+				posX.var=posX.var+20
+			# ~ print(posX)
+			# ~ label6.var = tk.Label(root, text="pareggio")
+			# ~ label6.var.config(font=('helvetica', 14))
+			# ~ canvas1.var.create_window(500, 50, window=label6.var)		
+			# ~ if j==4 or j==6:
+			if ((j-1)%3==0):
+				posX.var=1000
+				posY.var=posY.var+20
+			label_res.var = tk.Label(root, text=x)
+			label_res.var.config(font=('helvetica', 14))
+			canvas1.var.create_window(posX.var, posY.var, window=label_res.var)		
+	def inizia_umano():
+				# ~ def disegna_ovale_1():
+						# ~ if vinci.var=="b":		#disegna i cerchi solo se non il giocatore  non ha ancora vinto
+						
+												
+						# ~ else:
+				if posizione.var in listascelte_possibili.var:
+						
+					# ~ a.var=a.var+1	
+					
+					# ~ label8.var = tk.Label(root, text="turno "+str(a.var))
+					# ~ label8.var.config(font=('helvetica', 14))
+					# ~ canvas1.var.create_window(800, 130, window=label8.var)		
+			# ~ if scegli==str(posizione.var):
+			# ~ if scegli==str(posizione.var):
+			
+					# ~ print("djfkljdlfkdl")
+					# ~ canvas1.var.create_rectangle(250, 450, 350, 550,outline="#f11", fill="#1f1", width=2)
+					res.var[posizione.var]="*"	
+						
+					# ~ if (event.x >253 and event.x<400) and (event.y>100 and event.y<200) or (event.x>400 and event.x<600) and (event.y>100 and event.y<200)
+					# ~ or (event.x>600 and event.x<800) and (event.y>100 and event.y<200) or (event.x >253 and event.x<400) and (event.y>200 and event.y<400) or
+					# ~ or (event.x>400 and event.x<600) and (event.y>200 and event.y<400) or (event.x>400 and event.x<600) and (event.y>200 and event.y<400):
+					disegna_rettangolo()
+					
+						
+					# ~ if res.var[3]=="-":
+					
+					
+					# ~ if vinci2.var=="b":
+						# ~ posizione.var=3
+						# ~ a.var=a.var+1
+					
+					# ~ else:
+						# ~ print("ciaociao")
+				
+					# ~ if vinci2.var=="b":
+						# ~ posizione.var=4
+						# ~ a.var=a.var+1
+							
+					
+							# ~ print("ciaociao")
+				# ~ elif(event.x>600 and event.x<800) and (event.y>200 and event.y<400):
+					# ~ for scegli in sceltepc.var:
+							# ~ if scegli==str(0):
+					# ~ if vinci2.var=="b":
+						# ~ posizione.var=5
+					a.var=a.var+1
+				
+					print(res.var)
+					# ~ label_res.var.destroy()			
+					listascelte_possibili.var.remove(posizione.var)
+					print(listascelte_possibili.var)
+					condizioni_vittoria()
+				
+					traccia_riga()
+					# ~ condizioni_pareggio()
+					if len(listascelte_possibili.var)>=1:
+						if vinci2.var=="b" and vinci.var=="b":
+							x.var=random.choice(listascelte_possibili.var)
+							
+							res.var[x.var]="#"
+
+							# ~ d
+								
+							listascelte_possibili.var.remove(x.var)
+							# ~ else:
+								# ~ printe("abcdef")
+							# ~ vinci.var="a"	
+							print("posizione= ",posizione.var)
+							print("turno ",a.var)
+						
+								# ~ else:
+							label_res.var = tk.Label(root, text="")				
+							label_res.var.config(font=('helvetica', 14))		# ~ if conta%3==0:
+									# ~ j=j+20
+							canvas1.var.create_window(1100,70,window=label_res.var)	
+
+							label_res.var.destroy()
+
+							# ~ canvas= Canvas(root, width=100, height=100)
+							# ~ vinci.var="a"
+
+							condizioni_vittoria()
+							
+							disegna_ovale_1()
+							# ~ if vinci1.var=="a" or vinci2.var=="a":
+							traccia_riga()
+			
+					# ~ elif a.var>=5 :
+							# ~ if vinci2.var=="b" and vinci.var=="b":	
+								# ~ pareggio.var=="pareggio"
+						
+					
+				# ~ pareggio.var="pareggio"
+							# ~ cancella_ovale()
+	# ~ if vinci2.var=="a":
+
+	# ~ label6.var.destroy()
+	# ~ elif pareggio.var=="pareggio": 
+	# ~ label6.var = tk.Label(root, text="PAREGGIO")
+				# ~ label6.var.config(font=('helvetica', 14))
+				# ~ canvas1.var.create_window(500, 50, window=label6.var)											
+
+	# ~ if vinci.var=="a":
+
+					label_res.var.destroy()
+						# ~ label6.var.destroy()e
+					drawlabel()	
 	# ~ cancella_linee()
 	
 		# ~ if conta.var==5 and vinci.var=="b" and vinci2.var=="b":
@@ -939,22 +1210,7 @@ def entrybox():
 			# ~ print("clicked at", event.x, event.y)
 			# ~ if vinci2.var=="b" or vinci.var=="b":
 	# ~ if conta.var==1:
-	inizio="inizio"
-	if inizio=="inizio":
-		scelta_pc.var=random.choice(listascelte_possibili.var)
-			# ~ if scelta_
-		# ~ posizione.var=scelta_pc
-		# ~ conta.var=1:
-		# ~ if conta.var%2!=0:
-		print(scelta_pc.var)		#scelta_iniziale del pc
-		# ~ posizione.var=scelta_pc
-		res.var[scelta_pc.var]="#"
-		disegna_ovale()
-		listascelte_possibili.var.remove(scelta_pc.var)
-		# ~ scelta_giocatore()			
-		print(listascelte_possibili.var)
-		# ~ condizioni_vittoria()
-		conta.var=conta.var+1
+
 			# ~ print ("pressed", repr(event.char))
 	# ~ def contaclick():
 		# ~ contaclick.var=0
@@ -1088,65 +1344,18 @@ def entrybox():
 				# ~ label6.var = tk.Label(root, text="")
 				# ~ label6.var.config(font=('helvetica', 14))
 				# ~ canvas1.var.create_window(1000, 200, window=label6.var)
-				print("ciao",posizione.var)
-				# ~ label6.var.destroy()
-				condizioni_vittoria()
-				if vinci.var=="b" and vinci2.var=="b":
-					if posizione.var in listascelte_possibili.var:
-					
-						res.var[posizione.var]="*"
-						disegna_rettangolo()
-						listascelte_possibili.var.remove(posizione.var)
-						
-						condizioni_vittoria()
-						traccia_riga()
-					
-						if vinci.var=="b" and vinci2.var=="b":
-							scelta_pc.var=random.choice(listascelte_possibili.var)
-					
-				
-							print(scelta_pc.var)		#scelta_iniziale del pc
-							# ~ posizione.var=scelta_pc
-							res.var[scelta_pc.var]="#"
-							disegna_ovale()
-							listascelte_possibili.var.remove(scelta_pc.var)
-							# ~ scelta_giocatore()			
-							print(listascelte_possibili.var)
-							condizioni_vittoria()	
-							traccia_riga()
-							
-						if vinci.var=="a" and vinci2.var=="b" :
-								inizio="no"
-								
-																# ~ canvas = tk.Canvas(root, width=400, height=500)
-								# ~ canvas.pack()
-								# ~ canvas.create_text(100,10, text="Hello World!")
-								testo.var=canvas1.var.create_text(1000,300, font=("Purisa", 20),text="il giocatore vince")
-								# ~ label6.var.destroy()
-								# ~ label6.var = tk.Label(root, text="vince giocatore")
-								# ~ label6.var.config(font=('helvetica', 14))
-								# ~ canvas1.var.create_window(1000, 200, window=label6.var) 
-										# ~ vinci.var="b"
-												# ~ else:
-													# ~ vinci.var="b"
-													# ~ vinci2.var="b"
-													# ~ caso.var=-1000
-						if vinci2.var=="a" and vinci.var=="b":
-								testo.var=canvas1.var.create_text(1000,300,font=("Purisa", 20),text="il pc vince")
-								# ~ label6.var.destroy()
-								# ~ label6.var = tk.Label(root, text="vince PC")
-								# ~ label6.var.config(font=('helvetica', 14))
-								# ~ canvas1.var.create_window(1000, 200, window=label6.var) 
-						
-						if len(listascelte_possibili.var)==0 and vinci.var=="b" and vinci2.var=="b":
-								# ~ label6.var.destroy()
-								testo.var=canvas1.var.create_text(1000,300,font=("Purisa", 20), text="pareggio")
-								# ~ label6.var = tk.Label(root, text="PAREGGIO")
-								# ~ label6.var.config(font=('helvetica', 14))
-								# ~ canvas1.var.create_window(1000, 200, window=label6.var) 
-						print(listascelte_possibili.var)
-						# ~ print("testo ",testo.var)
-				
+				print(c_partita.var)
+				# ~ canvas1.var.delete(t)
+				if c_partita.var%2==0:
+					t=canvas1.var.create_text(200,300,font=("Purisa", 20), text="")
+					canvas1.var.delete(t)
+					t=canvas1.var.create_text(200,300,font=("Purisa", 20), text="inizia umano")
+					inizia_umano()
+				else:
+					t=canvas1.var.create_text(200,300,font=("Purisa", 20), text="")
+					canvas1.var.delete(t)
+					t=canvas1.var.create_text(200,300,font=("Purisa", 20), text="inizia pc")
+					inizia_pc()
 	button1 = tk.Button(text='restart', command=newgame, bg='brown', fg='white', font=('helvetica', 9, 'bold'))
 	canvas1.var.create_window(50,50, window=button1)
 				

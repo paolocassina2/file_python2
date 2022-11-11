@@ -156,7 +156,7 @@ while True:
 	
 	
 	#quadrati
-	primoquadrato =
+	# ~ primoquadrato =
 		
 	
 	#colonne

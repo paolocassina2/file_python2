@@ -409,7 +409,7 @@ def naviga_tra_i_file():
 				
 				print()
 		
-				inp =input("scrivi NOME CARTELLA oppure 'break' per scegliere il path OPPURE scrivi 'cd..' per tornare indietro nel path	OPPURE 'ordina' per mettere ordine nella cartella  ")
+				inp =input("scrivi NOME CARTELLA oppure 'break' per interrompere il programma OPPURE scrivi 'cd..' per tornare indietro nel path	OPPURE 'ordina' per mettere ordine nella cartella  ")
 				# ~ print(path.var)
 				if inp!="cd.." and inp!="break" and inp!="" and inp!="ordina":		
 
